@@ -82,16 +82,14 @@ function constructTweetButton() {
     // let current_date = new Date().toLocaleString('en-IN');
     let active_delta = key_values.confirmeddelta - key_values.recovereddelta
     let active_delta_status = active_delta >= 0? "increased" : "decreased";
-    const tweet_content = `COVID-19 India : 📊 as of ${current_date} IST
+    const tweet_content = `COVID-19 India Count : 📊 as of ${current_date} IST
     Total Confirmed : ${total.confirmed}
     Total Recovered : ${total.recovered}
     Total Deceased  : ${total.deaths}
 
     Number of cases reported today: ${Math.abs(key_values.confirmeddelta)}
 
-    Follow @covid19indiaorg
-
-    #COVID19India #SocialDistancing
+    #CoronaCurfew.Live #India
     More @`
 
     jQuery("#twitter_share").attr("data-text", tweet_content);
